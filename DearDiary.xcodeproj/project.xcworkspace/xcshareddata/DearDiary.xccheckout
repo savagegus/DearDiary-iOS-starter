@@ -10,29 +10,29 @@
 	<string>DearDiary</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>45188CF5-A048-4511-B3A6-3EF3690D4ECF</key>
-		<string>https://github.com/baasbox/DearDiary-iOS-starter.git</string>
+		<key>FC38894CC0E84F0D2BD40CA28CD30E64862E34B4</key>
+		<string>github.com:savagegus/DearDiary-iOS-starter.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>DearDiary.xcodeproj/project.xcworkspace</string>
+	<string>DearDiary.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>45188CF5-A048-4511-B3A6-3EF3690D4ECF</key>
+		<key>FC38894CC0E84F0D2BD40CA28CD30E64862E34B4</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/baasbox/DearDiary-iOS-starter.git</string>
+	<string>github.com:savagegus/DearDiary-iOS-starter.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>45188CF5-A048-4511-B3A6-3EF3690D4ECF</string>
+	<string>FC38894CC0E84F0D2BD40CA28CD30E64862E34B4</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>45188CF5-A048-4511-B3A6-3EF3690D4ECF</string>
+			<string>FC38894CC0E84F0D2BD40CA28CD30E64862E34B4</string>
 			<key>IDESourceControlWCCName</key>
 			<string>DearDiary-iOS-starter</string>
 		</dict>

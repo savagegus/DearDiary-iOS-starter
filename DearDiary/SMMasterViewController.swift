@@ -75,7 +75,7 @@ class SMMasterViewController: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow() {
                 let post = posts[indexPath.row] as! SMPost
                 if let destination = segue.destinationViewController as? SMDetailViewController {
-                    destination.setPost(post)
+                    destination.post = post
                 }
             }
         }
