@@ -12,8 +12,6 @@
 		BDAC0CF117F42EC700A58451 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAC0CF017F42EC700A58451 /* CoreGraphics.framework */; };
 		BDAC0CF317F42EC700A58451 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAC0CF217F42EC700A58451 /* UIKit.framework */; };
 		BDAC0CF917F42EC700A58451 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDAC0CF717F42EC700A58451 /* InfoPlist.strings */; };
-		BDAC0CFB17F42EC700A58451 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAC0CFA17F42EC700A58451 /* main.m */; };
-		BDAC0CFF17F42EC700A58451 /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAC0CFE17F42EC700A58451 /* SMAppDelegate.m */; };
 		BDAC0D0217F42EC700A58451 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDAC0D0017F42EC700A58451 /* Main.storyboard */; };
 		BDAC0D0A17F42EC700A58451 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDAC0D0917F42EC700A58451 /* Images.xcassets */; };
 		BDAC0D1117F42EC700A58451 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAC0D1017F42EC700A58451 /* XCTest.framework */; };
@@ -33,6 +31,7 @@
 		C902339F1AFC2699006A631E /* SMMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C902339E1AFC2699006A631E /* SMMasterViewController.swift */; };
 		C90234181AFD2972006A631E /* SMDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90234171AFD2972006A631E /* SMDetailViewController.swift */; };
 		C902341C1AFD5DD3006A631E /* SMPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C902341B1AFD5DD3006A631E /* SMPost.swift */; };
+		C902344E1AFD6140006A631E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C902344D1AFD6140006A631E /* AppDelegate.swift */; };
 		D37A339E1920AA2D0077507A /* SMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D37A339C1920AA2D0077507A /* SMLoginViewController.m */; };
 		D37A339F1920AA2D0077507A /* SMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D37A339D1920AA2D0077507A /* SMLoginViewController.xib */; };
 /* End PBXBuildFile section */
@@ -56,10 +55,7 @@
 		BDAC0CF217F42EC700A58451 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BDAC0CF617F42EC700A58451 /* DearDiary-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DearDiary-Info.plist"; sourceTree = "<group>"; };
 		BDAC0CF817F42EC700A58451 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BDAC0CFA17F42EC700A58451 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDAC0CFC17F42EC700A58451 /* DearDiary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DearDiary-Prefix.pch"; sourceTree = "<group>"; };
-		BDAC0CFD17F42EC700A58451 /* SMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMAppDelegate.h; sourceTree = "<group>"; };
-		BDAC0CFE17F42EC700A58451 /* SMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMAppDelegate.m; sourceTree = "<group>"; };
 		BDAC0D0117F42EC700A58451 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDAC0D0917F42EC700A58451 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BDAC0D0F17F42EC700A58451 /* DearDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DearDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +83,7 @@
 		C90233A01AFC26C8006A631E /* DearDiary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DearDiary-Bridging-Header.h"; sourceTree = "<group>"; };
 		C90234171AFD2972006A631E /* SMDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMDetailViewController.swift; sourceTree = "<group>"; };
 		C902341B1AFD5DD3006A631E /* SMPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPost.swift; sourceTree = "<group>"; };
+		C902344D1AFD6140006A631E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D37A339B1920AA2D0077507A /* SMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLoginViewController.h; sourceTree = "<group>"; };
 		D37A339C1920AA2D0077507A /* SMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLoginViewController.m; sourceTree = "<group>"; };
 		D37A339D1920AA2D0077507A /* SMLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMLoginViewController.xib; sourceTree = "<group>"; };
@@ -155,8 +152,7 @@
 			children = (
 				C902339D1AFC2516006A631E /* BaasBox */,
 				BDAC0D2617F42F2F00A58451 /* Model */,
-				BDAC0CFD17F42EC700A58451 /* SMAppDelegate.h */,
-				BDAC0CFE17F42EC700A58451 /* SMAppDelegate.m */,
+				C902344D1AFD6140006A631E /* AppDelegate.swift */,
 				BDAC0D0017F42EC700A58451 /* Main.storyboard */,
 				C902339E1AFC2699006A631E /* SMMasterViewController.swift */,
 				C90234171AFD2972006A631E /* SMDetailViewController.swift */,
@@ -175,7 +171,6 @@
 			children = (
 				BDAC0CF617F42EC700A58451 /* DearDiary-Info.plist */,
 				BDAC0CF717F42EC700A58451 /* InfoPlist.strings */,
-				BDAC0CFA17F42EC700A58451 /* main.m */,
 				BDAC0CFC17F42EC700A58451 /* DearDiary-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -331,14 +326,13 @@
 			files = (
 				C90233971AFC250F006A631E /* BAAFile.m in Sources */,
 				C90233991AFC250F006A631E /* BAAMutableURLRequest.m in Sources */,
-				BDAC0CFF17F42EC700A58451 /* SMAppDelegate.m in Sources */,
 				C902341C1AFD5DD3006A631E /* SMPost.swift in Sources */,
+				C902344E1AFD6140006A631E /* AppDelegate.swift in Sources */,
 				C90234181AFD2972006A631E /* SMDetailViewController.swift in Sources */,
 				C902339A1AFC250F006A631E /* BAAObject.m in Sources */,
 				C902339C1AFC250F006A631E /* BAAUser.m in Sources */,
 				C902339B1AFC250F006A631E /* BaasBox.m in Sources */,
 				C90233961AFC250F006A631E /* BAAClient.m in Sources */,
-				BDAC0CFB17F42EC700A58451 /* main.m in Sources */,
 				C90233981AFC250F006A631E /* BAAGlobals.m in Sources */,
 				D37A339E1920AA2D0077507A /* SMLoginViewController.m in Sources */,
 				C902339F1AFC2699006A631E /* SMMasterViewController.swift in Sources */,
