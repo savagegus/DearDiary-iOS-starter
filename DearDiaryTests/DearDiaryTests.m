@@ -9,7 +9,6 @@
 #import <XCTest/XCTest.h>
 #import "BAAClient.h"
 #import "TrafficLight.h"
-#import "SMPost.h"
 
 /*
  
@@ -24,7 +23,7 @@
 
 @interface DearDiaryTests : XCTestCase
 
-@property (strong) SMPost *post;
+//@property (strong) SMPost *post;
 
 @end
 

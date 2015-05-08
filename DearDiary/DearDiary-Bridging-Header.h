@@ -9,5 +9,4 @@
 #ifndef DearDiary_DearDiary_Bridging_Header_h
 #define DearDiary_DearDiary_Bridging_Header_h
 #import "BAAClient.h"
-#import "SMPost.h"
 #endif

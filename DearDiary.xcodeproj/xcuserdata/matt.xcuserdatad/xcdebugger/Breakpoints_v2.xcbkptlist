@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DearDiary/SMDetailViewController.swift"
-            timestampString = "452801594.13925"
+            timestampString = "452812398.336294"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "configureView()"
             landmarkType = "5">
          </BreakpointContent>
