@@ -32,7 +32,7 @@
 		C90234181AFD2972006A631E /* SMDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90234171AFD2972006A631E /* SMDetailViewController.swift */; };
 		C902341C1AFD5DD3006A631E /* SMPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C902341B1AFD5DD3006A631E /* SMPost.swift */; };
 		C902344E1AFD6140006A631E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C902344D1AFD6140006A631E /* AppDelegate.swift */; };
-		D37A339E1920AA2D0077507A /* SMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D37A339C1920AA2D0077507A /* SMLoginViewController.m */; };
+		C90234501AFD6710006A631E /* SMLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C902344F1AFD6710006A631E /* SMLoginViewController.swift */; };
 		D37A339F1920AA2D0077507A /* SMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D37A339D1920AA2D0077507A /* SMLoginViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -84,8 +84,7 @@
 		C90234171AFD2972006A631E /* SMDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMDetailViewController.swift; sourceTree = "<group>"; };
 		C902341B1AFD5DD3006A631E /* SMPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPost.swift; sourceTree = "<group>"; };
 		C902344D1AFD6140006A631E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D37A339B1920AA2D0077507A /* SMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLoginViewController.h; sourceTree = "<group>"; };
-		D37A339C1920AA2D0077507A /* SMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLoginViewController.m; sourceTree = "<group>"; };
+		C902344F1AFD6710006A631E /* SMLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMLoginViewController.swift; sourceTree = "<group>"; };
 		D37A339D1920AA2D0077507A /* SMLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMLoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,8 +155,7 @@
 				BDAC0D0017F42EC700A58451 /* Main.storyboard */,
 				C902339E1AFC2699006A631E /* SMMasterViewController.swift */,
 				C90234171AFD2972006A631E /* SMDetailViewController.swift */,
-				D37A339B1920AA2D0077507A /* SMLoginViewController.h */,
-				D37A339C1920AA2D0077507A /* SMLoginViewController.m */,
+				C902344F1AFD6710006A631E /* SMLoginViewController.swift */,
 				D37A339D1920AA2D0077507A /* SMLoginViewController.xib */,
 				BDAC0D0917F42EC700A58451 /* Images.xcassets */,
 				BDAC0CF517F42EC700A58451 /* Supporting Files */,
@@ -328,13 +326,13 @@
 				C90233991AFC250F006A631E /* BAAMutableURLRequest.m in Sources */,
 				C902341C1AFD5DD3006A631E /* SMPost.swift in Sources */,
 				C902344E1AFD6140006A631E /* AppDelegate.swift in Sources */,
+				C90234501AFD6710006A631E /* SMLoginViewController.swift in Sources */,
 				C90234181AFD2972006A631E /* SMDetailViewController.swift in Sources */,
 				C902339A1AFC250F006A631E /* BAAObject.m in Sources */,
 				C902339C1AFC250F006A631E /* BAAUser.m in Sources */,
 				C902339B1AFC250F006A631E /* BaasBox.m in Sources */,
 				C90233961AFC250F006A631E /* BAAClient.m in Sources */,
 				C90233981AFC250F006A631E /* BAAGlobals.m in Sources */,
-				D37A339E1920AA2D0077507A /* SMLoginViewController.m in Sources */,
 				C902339F1AFC2699006A631E /* SMMasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
