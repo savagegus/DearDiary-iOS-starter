@@ -14,19 +14,14 @@ class SMDetailViewController: UIViewController {
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var bodyTextView: UITextView!
     
-    // Explained here: http://blog.johnregner.com/post/103092814578/swift-properties-custom-setters-and-getters
-    var post: SMPost! {
-        didSet {
-            configureView()
-        }
-    }
+    var post: SMPost!
     
     func configureView() {
         if let
             title = post.postTitle,
             body = post.postBody {
-                titleField.text = title
-                bodyTextView.text = body
+                self.titleField.text = title
+                self.bodyTextView.text = body
         }
     }
     
@@ -40,7 +35,7 @@ class SMDetailViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
+    override func viewDidLoad() {        
         let frame = CGRect(x: 0, y: 0, width: 5, height: 20)
         let paddingView = UIView(frame: frame)
         titleField.leftView = paddingView

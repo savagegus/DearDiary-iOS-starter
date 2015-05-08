@@ -72,9 +72,10 @@ class SMMasterViewController: UITableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
+            
             if let indexPath = tableView.indexPathForSelectedRow() {
-                let post = posts[indexPath.row] as! SMPost
                 if let destination = segue.destinationViewController as? SMDetailViewController {
+                    let post = posts[indexPath.row] as! SMPost
                     destination.post = post
                 }
             }
