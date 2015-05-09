@@ -28,10 +28,18 @@ class SMDetailViewController: UIViewController {
     func savePost(sender: AnyObject) {
         post.postTitle = titleField.text
         post.postBody = bodyTextView.text
-        var defaultCenter = NSNotificationCenter()
-        defaultCenter.addObserver(self, selector: "reload", name: "POST_UPDATED", object: nil)
-        if let navigationController = navigationController {
-            navigationController.popViewControllerAnimated(true)
+        
+        post.saveObjectWithCompletion { (object: AnyObject!, error: NSError!) -> Void in
+            if error == nil {
+                NSLog("object saved")
+                self.post = object as? SMPost
+                NSNotificationCenter().addObserver(self, selector: "reload", name: "POST_UPDATED", object: nil)
+                if let navigationController = self.navigationController {
+                    navigationController.popViewControllerAnimated(true)
+                }
+            } else {
+                NSLog("error in updating \(error)")
+            }
         }
     }
     

@@ -51,9 +51,16 @@ class SMMasterViewController: UITableViewController {
         post.postTitle = "No title \(posts.count)"
         post.postBody = "No body"
         
-        posts.insertObject(post, atIndex: 0)
-        if let indexPath = NSIndexPath(forRow: posts.count - 1, inSection: 0) {
-            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        post.saveObjectWithCompletion { (post: AnyObject!, error: NSError!) -> Void in
+            if error == nil {
+                NSLog("created post on server \(post)")
+                self.posts.insertObject(post, atIndex: 0)
+                if let indexPath = NSIndexPath(forRow: self.posts.count - 1, inSection: 0) {
+                    self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                }
+            } else {
+                NSLog("error in saving \(error)")
+            }
         }
     }
     
