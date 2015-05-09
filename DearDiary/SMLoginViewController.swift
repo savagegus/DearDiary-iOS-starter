@@ -49,8 +49,8 @@ class SMLoginViewController : UIViewController {
             })
         } else {
             UIView.animateWithDuration(0.5, animations: {
-                self.loginView.alpha = 1;
-                self.signupView.alpha = 0;
+                self.loginView.alpha = 0;
+                self.signupView.alpha = 1;
             })
         }
     }
@@ -73,16 +73,21 @@ class SMLoginViewController : UIViewController {
     @IBAction func signup() {
         NSLog("Signup")
         let client = BAAClient.sharedClient()
-        client.createUserWithUsername(loginUsernameField.text,
-            password: loginPasswordField.text,
-            completion: {(success, error) in
-                if(success) {
-                    NSLog("user created \(client.currentUser)")
-                    self.dismissViewControllerAnimated(true, completion: nil)
-                } else {
-                    NSLog("error in creating user \(error)")
-                }
-        })
+        if let username = signupUsernameField.text, password = signupPasswordField.text {
+            client.createUserWithUsername(username,
+                password: password,
+                completion: {(success, error) in
+                    if(success) {
+                        NSLog("user created \(client.currentUser)")
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    } else {
+                        NSLog("error in creating user \(error)")
+                    }
+            })
+        } else {
+            NSLog("Username or password was blank")
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
