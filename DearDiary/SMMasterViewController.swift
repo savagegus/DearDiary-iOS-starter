@@ -26,6 +26,21 @@ class SMMasterViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let client = BAAClient.sharedClient()
+        if client.isAuthenticated() {
+            NSLog("Logged in")
+            SMPost.getObjectsWithCompletion({ (objects: [AnyObject]!, error: NSError!) -> Void in
+                self.posts = NSMutableArray(array: objects)
+                self.tableView.reloadData()
+            })
+        } else {
+            NSLog("need to login/signup")
+            let loginViewController = SMLoginViewController(nibName: "SMLoginViewController", bundle: nil)
+            navigationController?.presentViewController(loginViewController, animated: true, completion: nil)
+        }
+    }
     
     func reload() {
         tableView.reloadData()

@@ -8,7 +8,24 @@
 
 import Foundation
 
-class SMPost: NSObject {
+class SMPost: BAAObject {
     var postTitle: String!
     var postBody: String!
+    
+    override init(dictionary: [NSObject : AnyObject]!) {
+        super.init(dictionary: dictionary)
+        if let
+            actualPostTitle = dictionary["postTitle"] as? String,
+            actualPostBody = dictionary["postBody"] as? String {
+                postTitle = actualPostTitle
+                postBody = actualPostBody
+        }
+    }
+    
+    override func collectionName() -> String! {
+        return "document/memos"
+    }
+    
+    
+    
 }
