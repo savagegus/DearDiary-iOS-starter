@@ -15,10 +15,17 @@ class SMMasterViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // We don't want the default deselection animation, we handle it ourselves in -viewWillAppear
+        clearsSelectionOnViewWillAppear = false;
+        
+        // Makes the table view automatically calculate row heights
+        tableView.estimatedRowHeight = 44.0;
+        tableView.rowHeight = UITableViewAutomaticDimension;
+        
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "createPost")
         navigationItem.rightBarButtonItem = addButton
-        var defaultCenter = NSNotificationCenter()
-        defaultCenter.addObserver(self, selector: "reload", name: "POST_UPDATED", object: nil)
+        NSNotificationCenter().addObserver(self, selector: "reload", name: "POST_UPDATED", object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +35,8 @@ class SMMasterViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        addCellDeselectionAnimation()
+
         let client = BAAClient.sharedClient()
         if client.isAuthenticated() {
             NSLog("Logged in")
@@ -103,5 +112,54 @@ class SMMasterViewController: UITableViewController {
             }
         }
     }
-
+    
+    // This will animate the deselection of the selected table row along with the standard animation
+    func addCellDeselectionAnimation() {
+        if let indexPath = tableView.indexPathForSelectedRow() {
+            if let cell = tableView.cellForRowAtIndexPath(indexPath) {
+                if let initiallyInteractive = transitionCoordinator()?.initiallyInteractive() {
+                    if let presented = isBeingPresented() == true {
+                        if let !isMovingToParentViewController == true
+                    }!isMovingToParentViewController == true {
+                            
+                        }
+                }
+                
+                isBeingPresented() != nil &&
+                    isMovingToParentViewController() {
+                        
+                }
+            }
+        }
+        
+        
+        
+        UITableView *tableView = self.tableView;
+        NSIndexPath *indexPath = [tableView indexPathForSelectedRow];
+        
+        if (indexPath) {
+            UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+            
+            // In this case, I am appearing, but am already in a parent view controller
+            if (self.transitionCoordinator && self.transitionCoordinator.initiallyInteractive && !self.isBeingPresented && !self.isMovingToParentViewController) {
+                
+                [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+                    
+                    [cell setSelected:NO animated:YES];
+                    
+                    } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+                    if (context.isCancelled) {
+                    // Reverse the cell selection process
+                    [cell setSelected:YES animated:NO];
+                    } else {
+                    // Tell the table about the selection
+                    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+                    }
+                    }];
+                
+            } else {
+                [tableView deselectRowAtIndexPath:indexPath animated:YES];
+            }
+        }
+    }
 }
