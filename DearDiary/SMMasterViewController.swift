@@ -114,51 +114,28 @@ class SMMasterViewController: UITableViewController {
     }
     
     // This will animate the deselection of the selected table row along with the standard animation
+    // From https://github.com/dempseyatgithub/WordsWithoutFriends
     func addCellDeselectionAnimation() {
         if let indexPath = tableView.indexPathForSelectedRow() {
             if let cell = tableView.cellForRowAtIndexPath(indexPath) {
+                // In this case, I am appearing, but am already in a parent view controller
                 if let initiallyInteractive = transitionCoordinator()?.initiallyInteractive() {
-                    if let presented = isBeingPresented() == true {
-                        if let !isMovingToParentViewController == true
-                    }!isMovingToParentViewController == true {
-                            
-                        }
-                }
-                
-                isBeingPresented() != nil &&
-                    isMovingToParentViewController() {
-                        
-                }
-            }
-        }
-        
-        
-        
-        UITableView *tableView = self.tableView;
-        NSIndexPath *indexPath = [tableView indexPathForSelectedRow];
-        
-        if (indexPath) {
-            UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-            
-            // In this case, I am appearing, but am already in a parent view controller
-            if (self.transitionCoordinator && self.transitionCoordinator.initiallyInteractive && !self.isBeingPresented && !self.isMovingToParentViewController) {
-                
-                [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
-                    
-                    [cell setSelected:NO animated:YES];
-                    
-                    } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
-                    if (context.isCancelled) {
-                    // Reverse the cell selection process
-                    [cell setSelected:YES animated:NO];
+                    if !isBeingPresented() && !isMovingToParentViewController() {
+                        transitionCoordinator()?.animateAlongsideTransition({ (context: UIViewControllerTransitionCoordinatorContext!) -> Void in
+                            cell.setSelected(false, animated: true)
+                        }, completion: { (context: UIViewControllerTransitionCoordinatorContext!) -> Void in
+                            if context.isCancelled() {
+                                // Reverse the cell selection process
+                                cell.setSelected(true, animated: false)
+                            } else {
+                                // Tell the table about the selection
+                                self.tableView.deselectRowAtIndexPath(indexPath, animated: false)
+                            }
+                        })
                     } else {
-                    // Tell the table about the selection
-                    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+                        tableView.deselectRowAtIndexPath(indexPath, animated: true)
                     }
-                    }];
-                
-            } else {
-                [tableView deselectRowAtIndexPath:indexPath animated:YES];
+                }
             }
         }
     }
