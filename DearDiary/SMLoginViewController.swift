@@ -55,6 +55,8 @@ class SMLoginViewController : UIViewController {
         }
     }
     
+    // MARK: - Public API
+    
     @IBAction func login() {
         NSLog("Login")
         let client = BAAClient.sharedClient()
@@ -88,10 +90,6 @@ class SMLoginViewController : UIViewController {
             NSLog("Username or password was blank")
         }
         
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 }
 
